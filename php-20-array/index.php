@@ -48,8 +48,25 @@
 
 	<?php var_dump($my_array) ?>
 
-	<?= '<pre>' . print_r($my_array, true) . '<pre>' ?>
+	<?= '<pre>' . print_r($my_array, true) . '</pre>' ?>
 
 	<h1><?= $message ?></h1>
+
+	<h2>Qui l'array e' stampato con il ciclo for</h2>
+	<ul><?php
+		$my_array_len = count($my_array);
+		for ($i = 0; $i < $my_array_len; $i++) { ?>
+			<li><?= $my_array[$i] ?></li><?php
+		} ?>
+	</ul>
+
+	<h2>Anche qui</h2>
+	<ul><?php // alternativa
+		$my_array_len = count($my_array);
+		for ($i = 0; $i < $my_array_len; $i++) {
+			echo "<li>${my_array[$i]}</li>";
+		} ?>
+	</ul>
+
 </body>
 </html>
